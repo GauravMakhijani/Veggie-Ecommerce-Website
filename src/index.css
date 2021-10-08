@@ -86,7 +86,7 @@ code {
   transform-origin: 50% 50% 0px;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
-.hero-img-row {
+.row {
   align-items: center;
 }
 .cont-margin {
@@ -118,4 +118,43 @@ code {
     left: 0px;
     top: 0px;
   }
+}
+
+/* ---show-now------ */
+.shop-now-cont {
+  background-image: url("http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/02/content-3-back.jpg?id=36");
+}
+.shop-now-h1 {
+  font-family: "Playfair Display";
+  font-weight: normal;
+  color: #353535;
+
+  font-size: 70px;
+  line-height: 72px;
+}
+.shop-now-p {
+  color: #686868;
+  line-height: 1.8;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+}
+.shop-now-button {
+  font-family: monospace !important;
+  font-weight: normal !important;
+  padding: 14px 25px !important;
+  border: none !important;
+  background: #be0b06 !important;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  line-height: 14px !important;
+}
+
+.shop-now-button:hover {
+  background-color: black !important;
+}
+.cont-pd {
+  padding-top: 100px;
+}
+.p-6 {
+  padding: 8rem !important;
 }
