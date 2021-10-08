@@ -2,6 +2,7 @@ import Navigation from "./Navigation";
 import { Switch, Route } from "react-router-dom";
 import Home from "./home/Home";
 import Shop from "./shop/Shop";
+import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

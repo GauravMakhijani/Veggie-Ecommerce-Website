@@ -158,3 +158,21 @@ code {
 .p-6 {
   padding: 8rem !important;
 }
+
+/* ----about-us----- */
+.about-us-h2 {
+  font-family: "Playfair Display";
+  font-weight: normal;
+  color: #353535;
+  margin-bottom: 10px;
+  font-size: 50px;
+  line-height: 40px;
+}
+.about-us-img {
+  box-shadow: 10px 10px 61px 0 rgb(0 0 0 / 30%);
+  height: auto;
+  max-width: 100%;
+}
+.mb-6 {
+  margin-bottom: 8rem !important;
+}
