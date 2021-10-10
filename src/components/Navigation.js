@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 class Navigation extends Component {
   render() {
     const count = this.props.products.cart.length;
@@ -11,20 +12,20 @@ class Navigation extends Component {
       <div>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
           <Container>
-            <Navbar.Brand href="/">Veggie</Navbar.Brand>
+            <Link to="/">Veggie</Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/shop">Shop</Nav.Link>
+                <Link to="/">Home</Link>
+                <Link to="/shop">Shop</Link>
               </Nav>
             </Navbar.Collapse>
-            <Nav.Link href="/cart">
+            <Link to="/cart">
               <div className="cart-div">
                 <FontAwesomeIcon icon={faShoppingBag} className="cart-icon" />
                 {count > 0 ? <span className="icon-span">{count}</span> : ""}
               </div>
-            </Nav.Link>
+            </Link>
           </Container>
         </Navbar>
       </div>

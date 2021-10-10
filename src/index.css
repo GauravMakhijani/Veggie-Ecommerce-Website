@@ -274,6 +274,7 @@ code {
 .table-row {
   background: #f3f3f3;
   position: relative;
+  /* border-bottom: none; */
 }
 .cart-product-img {
   width: 120px;
