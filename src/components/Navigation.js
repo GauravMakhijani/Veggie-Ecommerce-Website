@@ -7,19 +7,28 @@ import { Link } from "react-router-dom";
 class Navigation extends Component {
   render() {
     const count = this.props.products.cart.length;
-    console.log("count", count);
+    // console.log("count", count);
     return (
       <div>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar className="navbar" fixed="top" collapseOnSelect expand="lg">
           <Container>
-            <Link to="/">Veggie</Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Link to="/">Home</Link>
-                <Link to="/shop">Shop</Link>
+                <Link className="link active" to="/">
+                  Home
+                </Link>
+                <Link className="link" to="/shop">
+                  Shop
+                </Link>
               </Nav>
             </Navbar.Collapse>
+            <Link to="/" className="brand-logo">
+              <img
+                src="http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/03/logo-1.png"
+                alt="site logo"
+              />
+            </Link>
             <Link to="/cart">
               <div className="cart-div">
                 <FontAwesomeIcon icon={faShoppingBag} className="cart-icon" />

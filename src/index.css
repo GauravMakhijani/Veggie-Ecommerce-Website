@@ -90,7 +90,7 @@ code {
   align-items: center;
 }
 .cont-margin {
-  margin-top: 6em;
+  margin-top: 9em;
 }
 .hero-banner {
   position: relative;
@@ -182,7 +182,7 @@ code {
 /* -----banner-image-------- */
 .banner-image {
   background-image: url("http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/02/banner-1.jpg");
-  height: 585px;
+  height: 650px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -252,12 +252,16 @@ code {
 
 /* -----------------Navbar--------------- */
 .cart-icon {
-  color: white;
+  color: #727272;
+
   font-size: 30px;
 }
 .icon-span {
   color: white;
   background-color: #be0b06;
+  height: 25px;
+  width: 25px;
+  text-align: center;
   font-size: 12px;
   position: absolute;
   top: 15px;
@@ -269,6 +273,46 @@ code {
   position: relative;
 }
 
+.navbar-collapse {
+  flex-grow: 0 !important;
+}
+.brand-logo {
+  position: absolute;
+  z-index: 20;
+  left: 44%;
+  top: 5px;
+}
+.brand-logo > img {
+  height: 135px;
+  width: auto;
+}
+.navbar {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  background-color: rgba(224, 224, 224, 0.73) !important;
+  /* position: sticky !important;
+  top: 0%; */
+}
+.link {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  color: #222;
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  opacity: 1;
+  text-decoration: none;
+}
+.link:hover {
+  border-bottom: #ffffff 2px solid;
+  color: #222;
+}
+.active {
+  color: black !important;
+  font-weight: 600 !important;
+}
 /* -------cart-------- */
 
 .table-row {
