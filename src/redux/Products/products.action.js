@@ -1,7 +1,8 @@
 import productTypes from "./products.types";
 
-export function fetchProductsStart() {
+export function addToCart(id) {
   return {
-    type: productTypes.FETCH_PRODUCTS_START,
+    type: productTypes.ADD_TO_CART,
+    id,
   };
 }

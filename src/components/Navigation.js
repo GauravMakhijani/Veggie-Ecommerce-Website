@@ -1,8 +1,12 @@
 import { Container, Navbar, Nav } from "react-bootstrap";
 import React, { Component } from "react";
-
-export default class Navigation extends Component {
+import { connect } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+class Navigation extends Component {
   render() {
+    const count = this.props.products.cart.length;
+    console.log("count", count);
     return (
       <div>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -15,9 +19,19 @@ export default class Navigation extends Component {
                 <Nav.Link href="/shop">Shop</Nav.Link>
               </Nav>
             </Navbar.Collapse>
+            <div className="cart-div">
+              <FontAwesomeIcon icon={faShoppingBag} className="cart-icon" />
+              {count > 0 ? <span className="icon-span">{count}</span> : ""}
+            </div>
           </Container>
         </Navbar>
       </div>
     );
   }
 }
+function mapStateToProps(state) {
+  return {
+    products: state.products,
+  };
+}
+export default connect(mapStateToProps)(Navigation);

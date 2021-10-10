@@ -2,14 +2,18 @@ import React, { Component } from "react";
 
 import { connect } from "react-redux";
 import Banner from "./Banner";
+import Header from "./Header";
 import ProductList from "./ProductList";
 
 class Shop extends Component {
   render() {
+    const { products } = this.props.products;
+    console.log("cart", this.props.products.cart);
     return (
       <div>
         <Banner />
-        <ProductList />
+        <Header />
+        <ProductList products={products} />
       </div>
     );
   }

@@ -187,6 +187,7 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  background-attachment: fixed;
 }
 
 .banner-text {
@@ -234,4 +235,36 @@ code {
   border-color: #be0b06 !important;
   overflow: hidden;
   box-shadow: 0 0 1px transparent;
+}
+
+/* -----header---- */
+.head-h1 {
+  font-size: 75px;
+  font-family: layfair Display, serif;
+  color: #353535;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mt-6 {
+  margin-top: 5rem !important;
+}
+
+/* -----------------Navbar--------------- */
+.cart-icon {
+  color: white;
+  font-size: 30px;
+}
+.icon-span {
+  color: white;
+  background-color: #be0b06;
+  font-size: 12px;
+  position: absolute;
+  top: 15px;
+  left: 17px;
+  border-radius: 100%;
+  padding: 4px 6px 5px 6px;
+}
+.cart-div {
+  position: relative;
 }
