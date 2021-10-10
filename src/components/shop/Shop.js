@@ -1,15 +1,21 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
+import Banner from "./Banner";
+import ProductList from "./ProductList";
+
 class Shop extends Component {
   render() {
-    console.log(this.props);
-    return <div>shop</div>;
+    return (
+      <div>
+        <Banner />
+        <ProductList />
+      </div>
+    );
   }
 }
 
 function mapStateToProps(state) {
-  console.log(state);
   return {
     products: state.products,
   };

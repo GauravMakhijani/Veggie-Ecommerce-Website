@@ -176,3 +176,62 @@ code {
 .mb-6 {
   margin-bottom: 8rem !important;
 }
+
+/* ---------------------Shop------------------------------------ */
+
+/* -----banner-image-------- */
+.banner-image {
+  background-image: url("http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/02/banner-1.jpg");
+  height: 585px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.banner-text {
+  font-family: "Great Vibes", cursive;
+  color: #fff;
+  line-height: 1;
+  position: absolute;
+  top: 43%;
+  left: -4%;
+  right: 0;
+
+  text-align: center;
+}
+
+/* --------product-list---------- */
+
+/* ----card-------- */
+.card {
+  width: 18rem;
+  background: #f2f2f2 !important;
+}
+.card-body {
+  padding: 0 24px;
+}
+.card-title {
+  font-family: serif;
+  font-size: 1.5em !important;
+  font-weight: 400 !important;
+  line-height: 1.1 !important;
+  color: #353535;
+}
+.card-text {
+  color: #686868 !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+.card-price {
+  font-size: 26px;
+  color: #be0b06;
+}
+.card-button {
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #be0b06 !important;
+  border-color: #be0b06 !important;
+  overflow: hidden;
+  box-shadow: 0 0 1px transparent;
+}
