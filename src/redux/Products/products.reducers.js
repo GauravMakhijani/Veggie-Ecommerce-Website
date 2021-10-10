@@ -1,19 +1,12 @@
 import productTypes from "./products.types";
-
+import data from "../../data.json";
 const INITIAL_STATE = {
-  products: [],
+  products: data.products,
+  cart: data.cart,
 };
 
 export default function products(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case productTypes.FETCH_PRODUCTS_START:
-      return state;
-    case productTypes.FETCH_PRODUCTS_SUCCESS:
-      return state;
-
-    case productTypes.FETCH_PRODUCTS_FAILURE:
-      return state;
-
     default:
       return state;
   }

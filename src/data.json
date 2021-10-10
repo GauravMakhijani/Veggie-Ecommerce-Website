@@ -1,0 +1,18 @@
+{
+    "products":[
+        {
+            "id" : 1,
+            "name": "Fresh Tomato",
+            "price":60 ,
+            "description":""
+        }
+    ],
+    "cart":[
+        {
+            "id" : 1,
+            "name": "Fresh Tomato",
+            "price":60 ,
+            "description":""
+        }
+    ]
+}

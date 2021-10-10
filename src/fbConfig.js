@@ -1,10 +1,7 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// import { initializeApp } from "firebase/app";
+import firebase from "firebase/compat/app";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDh2TSCcctHwUu-U_wEMOvmXjUh_2Dprjs",
   authDomain: "veggie-ecommerce.firebaseapp.com",
@@ -15,5 +12,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export default getFirestore();
+// const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+
+// const db = getFirestore(app);
+export default firebase;
