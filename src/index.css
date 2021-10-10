@@ -268,3 +268,111 @@ code {
 .cart-div {
   position: relative;
 }
+
+/* -------cart-------- */
+
+.table-row {
+  background: #f3f3f3;
+  position: relative;
+}
+.cart-product-img {
+  width: 120px;
+  height: auto;
+  vertical-align: middle;
+}
+.table-block {
+  padding-left: 30px !important;
+  width: 150px;
+  padding: 20px 15px !important;
+  vertical-align: middle;
+  line-height: 1.5em;
+}
+
+.cart-product-name {
+  color: #5c5c5c;
+  font-size: 18px;
+}
+.cart-product-price {
+  color: #ad3516;
+  font-size: 18px;
+}
+.cart-product-count {
+  min-height: 35px;
+  width: 4.631em;
+  text-align: center;
+  vertical-align: middle;
+  height: 38px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #686868;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.cart-product-close {
+  background: #da8e7b;
+  color: #fff !important;
+  font-size: 1.5em;
+  height: 1.3em;
+  width: 1.3em;
+  text-align: center;
+  line-height: 0;
+  border-radius: 100%;
+  text-decoration: none;
+  font-weight: 700;
+  border: 0;
+}
+.cart-product-close:hover {
+  background: #ad3516;
+}
+.total-heading {
+  font: 18px Roboto, sans-serif;
+  font-weight: 500;
+  color: #5c5c5c;
+  text-transform: uppercase;
+  padding: 20px 15px !important;
+  background: #f3f3f3;
+  width: 35%;
+  text-align: left;
+  border-bottom: none;
+}
+.total-price {
+  color: #ad3516;
+  font: 18px Roboto, sans-serif;
+  font-weight: 500;
+  text-align: right;
+  padding: 20px 15px !important;
+
+  border-bottom: none;
+}
+.cart-h3 {
+  font-size: 1.875em !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Old Standard TT, serif;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #353535;
+}
+.cart-button {
+  display: inline-block;
+  font: 18px Lato, sans-serif;
+  font-weight: 700 !important;
+  border-radius: 4px !important;
+  text-align: center !important;
+  margin-bottom: 1em;
+  padding: 1em 2em !important;
+  background-color: #be0b06 !important;
+  color: #fff !important;
+  position: relative;
+  text-decoration: none !important;
+
+  left: auto;
+}
+.button-div {
+  text-align: right;
+}

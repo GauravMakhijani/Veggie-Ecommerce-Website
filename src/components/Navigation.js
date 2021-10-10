@@ -19,10 +19,12 @@ class Navigation extends Component {
                 <Nav.Link href="/shop">Shop</Nav.Link>
               </Nav>
             </Navbar.Collapse>
-            <div className="cart-div">
-              <FontAwesomeIcon icon={faShoppingBag} className="cart-icon" />
-              {count > 0 ? <span className="icon-span">{count}</span> : ""}
-            </div>
+            <Nav.Link href="/cart">
+              <div className="cart-div">
+                <FontAwesomeIcon icon={faShoppingBag} className="cart-icon" />
+                {count > 0 ? <span className="icon-span">{count}</span> : ""}
+              </div>
+            </Nav.Link>
           </Container>
         </Navbar>
       </div>

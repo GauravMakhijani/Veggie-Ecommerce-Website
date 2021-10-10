@@ -11,8 +11,8 @@ class Shop extends Component {
     console.log("cart", this.props.products.cart);
     return (
       <div>
-        <Banner />
-        <Header />
+        <Banner heading="Our Store" />
+        <Header heading="Shop" />
         <ProductList products={products} />
       </div>
     );

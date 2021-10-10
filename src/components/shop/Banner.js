@@ -5,7 +5,7 @@ export default class Banner extends Component {
     return (
       <div className="banner-image">
         <div className="banner-text">
-          <h1 style={{ fontSize: "5.5em" }}>Our store</h1>
+          <h1 style={{ fontSize: "5.5em" }}>{this.props.heading}</h1>
         </div>
       </div>
     );
