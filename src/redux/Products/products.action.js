@@ -13,3 +13,17 @@ export function removeFromCart(id) {
     id,
   };
 }
+
+export function increaseQty(id) {
+  return {
+    type: productTypes.INCREASE_QTY,
+    id,
+  };
+}
+
+export function decreaseQty(id) {
+  return {
+    type: productTypes.DECREASE_QTY,
+    id,
+  };
+}

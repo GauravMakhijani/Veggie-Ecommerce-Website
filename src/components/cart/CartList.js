@@ -1,12 +1,36 @@
 import React, { Component } from "react";
 import { Container, Table, CloseButton } from "react-bootstrap";
 import { connect } from "react-redux";
-import { removeFromCart } from "../../redux/Products/products.action";
+import {
+  increaseQty,
+  removeFromCart,
+  decreaseQty,
+} from "../../redux/Products/products.action";
 class CartList extends Component {
   handleClose(id) {
     const { dispatch } = this.props;
     dispatch(removeFromCart(id));
   }
+
+  handleIncreaseQty(id) {
+    const { dispatch } = this.props;
+    dispatch(increaseQty(id));
+  }
+
+  handleDecreaseQty(id) {
+    const { dispatch } = this.props;
+    dispatch(decreaseQty(id));
+  }
+
+  // getProductTotal(id) {
+  //   const { cart } = this.props.products;
+  //   let elementIndex = cart.findIndex((element) => element.id === id);
+  //   let total = 0;
+
+  //   total = cart[elementIndex].qty * cart[elementIndex].price;
+  //   console.log("total", total);
+  //   return total;
+  // }
   render() {
     const { cart } = this.props.products;
     console.log("cart", cart);
@@ -33,15 +57,33 @@ class CartList extends Component {
                     </span>
                   </td>
                   <td className="table-block">
+                    <div
+                      className="value-button"
+                      id="decrease"
+                      onClick={() => this.handleDecreaseQty(product.id)}
+                      value="Decrease Value"
+                    >
+                      -
+                    </div>
                     <input
-                      className="cart-product-count"
+                      readOnly
                       type="number"
                       id="number"
-                      defaultValue={product.qty}
+                      value={product.qty}
                     />
+                    <div
+                      className="value-button"
+                      id="increase"
+                      onClick={() => this.handleIncreaseQty(product.id)}
+                      value="Increase Value"
+                    >
+                      +
+                    </div>
                   </td>
                   <td className="table-block">
-                    <span className="cart-product-price">$30.00</span>
+                    <span className="cart-product-price">
+                      ${product.qty * product.price}.00
+                    </span>
                   </td>
                   <td className="table-block">
                     <CloseButton
