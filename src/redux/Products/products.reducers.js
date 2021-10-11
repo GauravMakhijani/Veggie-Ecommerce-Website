@@ -3,6 +3,7 @@ import data from "../../data.json";
 const INITIAL_STATE = {
   products: data.products,
   cart: data.cart,
+  cartTotalPrice: 0,
 };
 
 export default function products(state = INITIAL_STATE, action) {
@@ -67,6 +68,16 @@ export default function products(state = INITIAL_STATE, action) {
       return {
         ...state,
         cart: newCart,
+      };
+    case productTypes.CART_TOTAL:
+      let total = 0;
+      state.cart.forEach((product) => {
+        total += product.qty * product.price;
+      });
+      // console.log("total", total);
+      return {
+        ...state,
+        cartTotalPrice: total,
       };
 
     default:

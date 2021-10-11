@@ -487,3 +487,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .button-div {
   text-align: right;
 }
+.invalid-msg {
+  color: #be0b06;
+}

@@ -5,32 +5,27 @@ import {
   increaseQty,
   removeFromCart,
   decreaseQty,
+  cartTotal,
 } from "../../redux/Products/products.action";
 class CartList extends Component {
   handleClose(id) {
     const { dispatch } = this.props;
     dispatch(removeFromCart(id));
+    dispatch(cartTotal());
   }
 
   handleIncreaseQty(id) {
     const { dispatch } = this.props;
     dispatch(increaseQty(id));
+    dispatch(cartTotal());
   }
 
   handleDecreaseQty(id) {
     const { dispatch } = this.props;
     dispatch(decreaseQty(id));
+    dispatch(cartTotal());
   }
 
-  // getProductTotal(id) {
-  //   const { cart } = this.props.products;
-  //   let elementIndex = cart.findIndex((element) => element.id === id);
-  //   let total = 0;
-
-  //   total = cart[elementIndex].qty * cart[elementIndex].price;
-  //   console.log("total", total);
-  //   return total;
-  // }
   render() {
     const { cart } = this.props.products;
     console.log("cart", cart);

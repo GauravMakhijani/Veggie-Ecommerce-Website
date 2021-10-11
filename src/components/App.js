@@ -4,6 +4,7 @@ import Home from "./home/Home";
 import Shop from "./shop/Shop";
 import Footer from "./Footer";
 import Cart from "./cart/Cart";
+import Checkout from "./checkout/Checkout";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/cart">
           <Cart />
+        </Route>
+        <Route path="/checkout">
+          <Checkout />
         </Route>
       </Switch>
       <Footer />

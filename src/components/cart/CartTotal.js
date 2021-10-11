@@ -1,8 +1,15 @@
 import React, { Component } from "react";
 import { Button, Container, Table } from "react-bootstrap";
-
+import { connect } from "react-redux";
+import { cartTotal } from "../../redux/Products/products.action";
 class CartTotal extends Component {
+  componentDidMount() {
+    const { dispatch } = this.props;
+    dispatch(cartTotal());
+  }
   render() {
+    const total = this.props.products.cartTotalPrice;
+
     return (
       <div>
         <Container>
@@ -11,7 +18,7 @@ class CartTotal extends Component {
             <tbody>
               <tr className="table-row">
                 <th className="total-heading">SUBTOTAL</th>
-                <td className="total-price">$51.00</td>
+                <td className="total-price">${total}.00</td>
               </tr>
               <tr className="table-row">
                 <th className="total-heading">SHIPPING</th>
@@ -19,7 +26,7 @@ class CartTotal extends Component {
               </tr>
               <tr className="table-row">
                 <th className="total-heading">TOTAL</th>
-                <td className="total-price">$51.00</td>
+                <td className="total-price">${total}.00</td>
               </tr>
             </tbody>
           </Table>
@@ -31,4 +38,9 @@ class CartTotal extends Component {
     );
   }
 }
-export default CartTotal;
+function mapStateToProps(state) {
+  return {
+    products: state.products,
+  };
+}
+export default connect(mapStateToProps)(CartTotal);

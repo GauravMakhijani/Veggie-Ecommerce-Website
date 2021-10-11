@@ -3,5 +3,6 @@ const productTypes = {
   REMOVE_FROM_CART: "REMOVE_FROM_CART",
   INCREASE_QTY: "INCREASE_QTY",
   DECREASE_QTY: "DECREASE_QTY",
+  CART_TOTAL: "CART_TOTAL",
 };
 export default productTypes;

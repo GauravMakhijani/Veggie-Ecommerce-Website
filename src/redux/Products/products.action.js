@@ -27,3 +27,9 @@ export function decreaseQty(id) {
     id,
   };
 }
+
+export function cartTotal() {
+  return {
+    type: productTypes.CART_TOTAL,
+  };
+}
