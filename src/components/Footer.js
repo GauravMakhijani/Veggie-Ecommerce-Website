@@ -4,7 +4,7 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 export default class Footer extends Component {
   render() {
     return (
-      <div>
+      <div className="mt-5">
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
           <Container>
             <Nav>

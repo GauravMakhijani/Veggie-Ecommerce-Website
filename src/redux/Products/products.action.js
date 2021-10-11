@@ -6,3 +6,10 @@ export function addToCart(id) {
     id,
   };
 }
+
+export function removeFromCart(id) {
+  return {
+    type: productTypes.REMOVE_FROM_CART,
+    id,
+  };
+}

@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import { Container, Table, CloseButton } from "react-bootstrap";
 import { connect } from "react-redux";
+import { removeFromCart } from "../../redux/Products/products.action";
 class CartList extends Component {
+  handleClose(id) {
+    const { dispatch } = this.props;
+    dispatch(removeFromCart(id));
+  }
   render() {
     const { cart } = this.props.products;
     console.log("cart", cart);
@@ -42,42 +47,11 @@ class CartList extends Component {
                     <CloseButton
                       aria-label="Hide"
                       className="cart-product-close"
+                      onClick={() => this.handleClose(product.id)}
                     />
                   </td>
                 </tr>
               ))}
-
-              {/* <tr className="table-row">
-                <td className="table-block ">
-                  <img
-                    className="cart-product-img"
-                    src="http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/02/image-1-300x300.jpg"
-                    alt="product"
-                  />
-                </td>
-                <td className="table-block">
-                  <span className="cart-product-name">Beautiful Almonds</span>
-                </td>
-                <td className="table-block">
-                  <span className="cart-product-price">$30.00</span>
-                </td>
-                <td className="table-block">
-                  <input
-                    className="cart-product-count"
-                    type="number"
-                    id="number"
-                  />
-                </td>
-                <td className="table-block">
-                  <span className="cart-product-price">$30.00</span>
-                </td>
-                <td className="table-block">
-                  <CloseButton
-                    aria-label="Hide"
-                    className="cart-product-close"
-                  />
-                </td>
-              </tr> */}
             </tbody>
           </Table>
         </Container>

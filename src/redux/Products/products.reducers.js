@@ -14,6 +14,13 @@ export default function products(state = INITIAL_STATE, action) {
         ...state,
         cart: [...state.cart, item],
       };
+    case productTypes.REMOVE_FROM_CART:
+      const updatedCart = state.cart.filter((item) => item.id !== action.id);
+
+      return {
+        ...state,
+        cart: updatedCart,
+      };
     default:
       return state;
   }

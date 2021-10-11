@@ -19,7 +19,7 @@ function App() {
           <Cart />
         </Route>
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
