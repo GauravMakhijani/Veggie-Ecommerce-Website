@@ -120,6 +120,19 @@ code {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .hero-banner {
+    height: 218px !important;
+  }
+}
+@media only screen and (max-width: 1385px) {
+  .hero-banner {
+    width: 100%;
+    min-width: 250px;
+    height: auto;
+  }
+}
+
 /* ---show-now------ */
 .shop-now-cont {
   background-image: url("http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/02/content-3-back.jpg?id=36");
