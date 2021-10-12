@@ -29,7 +29,7 @@ const schema = yup.object().shape({
   //   MobileNumber:
 });
 
-export default function CheckoutForm() {
+export default function CheckoutForm(props) {
   const {
     register,
     handleSubmit,
@@ -37,9 +37,11 @@ export default function CheckoutForm() {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    props.onShow();
+  };
   console.log(errors);
-
   return (
     <Container>
       <h3 className="cart-h3">Billing details</h3>
@@ -121,65 +123,10 @@ export default function CheckoutForm() {
             <p className="invalid-msg">{errors["Zip"]?.message}</p>
           </Form.Group>
         </Row>
-
-        <Button variant="primary" type="submit">
-          Submit
+        <Button className="cart-button" type="submit">
+          Review Order
         </Button>
       </Form>
     </Container>
   );
 }
-
-// <form onSubmit={handleSubmit(onSubmit)}>
-//   <input
-//     type="text"
-//     placeholder="First name"
-//     {...register("First name", { required: true, maxLength: 80 })}
-//   />
-//   <input
-//     type="text"
-//     placeholder="Last name"
-//     {...register("Last name", { required: true, maxLength: 100 })}
-//   />
-//   <input
-//     type="text"
-//     placeholder="Street address"
-//     {...register("Street address", { required: true })}
-//   />
-//   <input
-//     type="text"
-//     placeholder="Town / City"
-//     {...register("Town / City", { required: true })}
-//   />
-//   <select {...register("State", { required: true })}>
-//     <option value="Madhya Pradesh, Punjab , Maharashtra, Other">
-//       Madhya Pradesh, Punjab , Maharashtra, Other
-//     </option>
-//   </select>
-//   <input
-//     type="number"
-//     placeholder="Pin Code"
-//     {...register("Pin Code", { required: true })}
-//   />
-//   <input
-//     type="text"
-//     placeholder="Email"
-//     {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
-//   />
-//   <input
-//     type="tel"
-//     placeholder="Mobile number"
-//     {...register("Mobile number", {
-//       required: true,
-//       minLength: 6,
-//       maxLength: 12,
-//     })}
-//   />
-//   <input
-//     type="text"
-//     placeholder="Order notes (optional)"
-//     {...register("Order notes (optional)", {})}
-//   />
-
-//   <input type="submit" />
-// </form>
