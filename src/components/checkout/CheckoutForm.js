@@ -42,6 +42,8 @@ export default function CheckoutForm() {
 
   return (
     <Container>
+      <h3 className="cart-h3">Billing details</h3>
+
       <Form noValidate onSubmit={handleSubmit(onSubmit)}>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridFname">

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Container, Table } from "react-bootstrap";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { cartTotal } from "../../redux/Products/products.action";
 class CartTotal extends Component {
   componentDidMount() {
@@ -31,7 +32,9 @@ class CartTotal extends Component {
             </tbody>
           </Table>
           <div className="button-div">
-            <Button className="cart-button">Proceed to checkout</Button>
+            <Link to="/checkout">
+              <Button className="cart-button">Proceed to checkout</Button>
+            </Link>
           </div>
         </Container>
       </div>
