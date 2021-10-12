@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 export default class Footer extends Component {
   render() {
     return (
@@ -9,7 +9,7 @@ export default class Footer extends Component {
           <Container>
             <Nav>
               <Navbar.Text>
-                © <a href="/">VEGGIE</a> made with love by Gaurav.
+                © <Link to="/">VEGGIE</Link> made with love by Gaurav.
               </Navbar.Text>
             </Nav>
           </Container>

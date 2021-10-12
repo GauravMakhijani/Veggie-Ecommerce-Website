@@ -32,10 +32,11 @@ class CartList extends Component {
     return (
       <div>
         <Container>
+          {cart.length === 0 && <h5 className="cart-empty">Cart is empty</h5>}
           <Table size="sm">
             <tbody>
               {cart.map((product) => (
-                <tr className="table-row">
+                <tr className="table-row" key={product.id}>
                   <td className="table-block">
                     <img
                       className="cart-product-img"

@@ -9,7 +9,6 @@ class Product extends Component {
   };
   render() {
     const { product } = this.props;
-    // console.log("props", this.props);
     return (
       <div>
         <Card className="card">

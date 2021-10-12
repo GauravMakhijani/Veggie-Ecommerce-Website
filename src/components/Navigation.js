@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 class Navigation extends Component {
   render() {
     const count = this.props.products.cart.length;
-    // console.log("count", count);
     return (
       <div>
         <Navbar className="navbar" fixed="top" collapseOnSelect expand="lg">

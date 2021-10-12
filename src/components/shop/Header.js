@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Breadcrumb, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 export default class Header extends Component {
   render() {
     return (
@@ -7,8 +8,8 @@ export default class Header extends Component {
         <Container>
           <h1 className="head-h1">{this.props.heading}</h1>
           <Breadcrumb>
-            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-            <Breadcrumb.Item active>{this.props.heading}</Breadcrumb.Item>
+            <Link to="/">Home </Link>
+            <Breadcrumb.Item active> / {this.props.heading}</Breadcrumb.Item>
           </Breadcrumb>
         </Container>
       </div>

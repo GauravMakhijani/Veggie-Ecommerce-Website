@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default class ShopNowCont extends Component {
   render() {
@@ -31,7 +32,9 @@ export default class ShopNowCont extends Component {
                 Logistics chain ensure each fruits and vegetables reaches your
                 doorsteps within 24 hours of plucking and harvesting.
               </p>
-              <Button className="shop-now-button mt-4">PURCHASE NOW</Button>
+              <Link to="/shop">
+                <Button className="shop-now-button mt-4">PURCHASE NOW</Button>
+              </Link>
             </Col>
           </Row>
         </Container>

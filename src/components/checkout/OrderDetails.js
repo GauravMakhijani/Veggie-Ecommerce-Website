@@ -18,7 +18,7 @@ class OrderDetails extends Component {
           </thead>
           <tbody>
             {cart.map((product) => (
-              <tr className="table-row">
+              <tr className="table-row" key={product.id}>
                 <th className="total-heading">
                   <span>{product.name}</span> x {product.qty}
                 </th>

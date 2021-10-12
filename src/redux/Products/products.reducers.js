@@ -75,19 +75,16 @@ export default function products(state = INITIAL_STATE, action) {
       state.cart.forEach((product) => {
         total += product.qty * product.price;
       });
-      // console.log("total", total);
       return {
         ...state,
         cartTotalPrice: total,
       };
     case productTypes.SET_CONTACT_DETAILS:
-      // console.log("chal beta", action.data);
       return {
         ...state,
         contactDetails: action.data,
       };
     case productTypes.CLEAR_ALL:
-      // console.log("chal beta", action.data);
       return {
         ...state,
         cart: data.cart,

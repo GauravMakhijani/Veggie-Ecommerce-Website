@@ -1,5 +1,4 @@
 import React from "react";
-// import { Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Col, Form, Button, Row, Container } from "react-bootstrap";
 import { connect } from "react-redux";
@@ -27,11 +26,9 @@ const schema = yup.object().shape({
     .positive()
     .integer()
     .typeError("Please enter a valid Zip"),
-  //   MobileNumber:
 });
 
 function CheckoutForm(props) {
-  // console.log("chal beta",;
   const {
     register,
     handleSubmit,
@@ -40,7 +37,6 @@ function CheckoutForm(props) {
     resolver: yupResolver(schema),
   });
   const onSubmit = (data) => {
-    // console.log(data);
     props.dispatch(setContactDetails(data));
     props.onShow();
   };
@@ -74,8 +70,6 @@ function CheckoutForm(props) {
             <Form.Control
               type="email"
               placeholder="Enter email"
-              //   ref={register}
-
               {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
             />
             <p className="invalid-msg">{errors["Email"]?.message}</p>

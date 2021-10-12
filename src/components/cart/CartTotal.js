@@ -10,7 +10,7 @@ class CartTotal extends Component {
   }
   render() {
     const total = this.props.products.cartTotalPrice;
-
+    const { cart } = this.props.products;
     return (
       <div>
         <Container>
@@ -31,11 +31,13 @@ class CartTotal extends Component {
               </tr>
             </tbody>
           </Table>
-          <div className="button-div">
-            <Link to="/checkout">
-              <Button className="cart-button">Proceed to checkout</Button>
-            </Link>
-          </div>
+          {cart.length !== 0 && (
+            <div className="button-div">
+              <Link to="/checkout">
+                <Button className="cart-button">Proceed to checkout</Button>
+              </Link>
+            </div>
+          )}
         </Container>
       </div>
     );
