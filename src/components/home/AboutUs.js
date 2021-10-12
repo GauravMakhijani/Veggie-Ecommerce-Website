@@ -10,7 +10,7 @@ export default class AboutUs extends Component {
             <Col>
               <img
                 className="about-us-img"
-                src="http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/02/small-text-baner.jpg"
+                src="images/booklet.jpg"
                 alt="book"
               />
             </Col>

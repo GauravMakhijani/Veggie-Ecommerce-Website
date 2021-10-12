@@ -23,10 +23,7 @@ class Navigation extends Component {
               </Nav>
             </Navbar.Collapse>
             <Link to="/" className="brand-logo">
-              <img
-                src="http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/03/logo-1.png"
-                alt="site logo"
-              />
+              <img src="images/logo-1.png" alt="site logo" />
             </Link>
             <Link to="/cart">
               <div className="cart-div">

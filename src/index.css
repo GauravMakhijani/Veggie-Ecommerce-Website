@@ -135,7 +135,7 @@ code {
 
 /* ---show-now------ */
 .shop-now-cont {
-  background-image: url("http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/02/content-3-back.jpg?id=36");
+  background-image: url("./bg_img/shop_now.jpg");
 }
 .shop-now-h1 {
   font-family: "Playfair Display";
@@ -194,7 +194,7 @@ code {
 
 /* -----banner-image-------- */
 .banner-image {
-  background-image: url("http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/02/banner-1.jpg");
+  background-image: url("./bg_img/banner_img.jpg");
   height: 650px;
   background-position: center;
   background-repeat: no-repeat;

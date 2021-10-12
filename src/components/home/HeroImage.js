@@ -14,11 +14,7 @@ export default class HeroImage extends Component {
             </h6>
           </Col>
           <Col>
-            <img
-              className="hero-banner"
-              src="http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/08/Untitled-10-min.png"
-              alt="banner"
-            />
+            <img className="hero-banner" src="images/kiwi.png" alt="banner" />
           </Col>
         </Row>
       </Container>

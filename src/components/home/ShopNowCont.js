@@ -9,11 +9,7 @@ export default class ShopNowCont extends Component {
         <Container className="cont-pd">
           <Row className="row ">
             <Col>
-              <img
-                className=""
-                src="http://wp.0effortthemes.com/themes/veggie/wp-content/uploads/2016/02/veg-rack.png"
-                alt="rack"
-              />
+              <img className="" src="images/veg_rack.png" alt="rack" />
             </Col>
             <Col className="p-6">
               <h1 className="shop-now-h1">Why veggie super market?</h1>
