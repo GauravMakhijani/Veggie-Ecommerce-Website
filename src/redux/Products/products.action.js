@@ -33,3 +33,14 @@ export function cartTotal() {
     type: productTypes.CART_TOTAL,
   };
 }
+export function setContactDetails(data) {
+  return {
+    type: productTypes.SET_CONTACT_DETAILS,
+    data,
+  };
+}
+export function clearAll() {
+  return {
+    type: productTypes.CLEAR_ALL,
+  };
+}

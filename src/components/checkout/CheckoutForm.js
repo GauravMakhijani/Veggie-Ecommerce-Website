@@ -2,9 +2,10 @@ import React from "react";
 // import { Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { Col, Form, Button, Row, Container } from "react-bootstrap";
-
+import { connect } from "react-redux";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { setContactDetails } from "../../redux/Products/products.action";
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
@@ -29,7 +30,8 @@ const schema = yup.object().shape({
   //   MobileNumber:
 });
 
-export default function CheckoutForm(props) {
+function CheckoutForm(props) {
+  // console.log("chal beta",;
   const {
     register,
     handleSubmit,
@@ -38,7 +40,8 @@ export default function CheckoutForm(props) {
     resolver: yupResolver(schema),
   });
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
+    props.dispatch(setContactDetails(data));
     props.onShow();
   };
   console.log(errors);
@@ -130,3 +133,9 @@ export default function CheckoutForm(props) {
     </Container>
   );
 }
+function mapStateToProps(state) {
+  return {
+    products: state.products,
+  };
+}
+export default connect(mapStateToProps)(CheckoutForm);

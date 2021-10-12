@@ -5,7 +5,9 @@ import Banner from "../shop/Banner";
 import CheckoutForm from "./CheckoutForm";
 import OrderDetails from "./OrderDetails";
 import ReviewModal from "./ReviewModal";
-export default function Checkout() {
+import { connect } from "react-redux";
+import { clearAll } from "../../redux/Products/products.action";
+function Checkout(props) {
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <div>
@@ -20,8 +22,21 @@ export default function Checkout() {
             <OrderDetails />
           </Col>
         </Row>
-        <ReviewModal show={modalShow} onHide={() => setModalShow(false)} />
+        <ReviewModal
+          show={modalShow}
+          onHide={() => {
+            setModalShow(false);
+            props.dispatch(clearAll());
+          }}
+        />
       </Container>
     </div>
   );
 }
+
+function mapStateToProps(state) {
+  return {
+    products: state.products,
+  };
+}
+export default connect(mapStateToProps)(Checkout);

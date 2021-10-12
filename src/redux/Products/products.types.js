@@ -4,5 +4,7 @@ const productTypes = {
   INCREASE_QTY: "INCREASE_QTY",
   DECREASE_QTY: "DECREASE_QTY",
   CART_TOTAL: "CART_TOTAL",
+  SET_CONTACT_DETAILS: "SET_CONTACT_DETAILS",
+  CLEAR_ALL: "CLEAR_ALL",
 };
 export default productTypes;

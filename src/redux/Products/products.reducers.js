@@ -4,6 +4,7 @@ const INITIAL_STATE = {
   products: data.products,
   cart: data.cart,
   cartTotalPrice: 0,
+  contactDetails: {},
 };
 
 export default function products(state = INITIAL_STATE, action) {
@@ -79,7 +80,20 @@ export default function products(state = INITIAL_STATE, action) {
         ...state,
         cartTotalPrice: total,
       };
-
+    case productTypes.SET_CONTACT_DETAILS:
+      // console.log("chal beta", action.data);
+      return {
+        ...state,
+        contactDetails: action.data,
+      };
+    case productTypes.CLEAR_ALL:
+      // console.log("chal beta", action.data);
+      return {
+        ...state,
+        cart: data.cart,
+        cartTotalPrice: 0,
+        contactDetails: {},
+      };
     default:
       return state;
   }

@@ -1,5 +1,8 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import OrderDetails from "./OrderDetails";
+import ShippingDetails from "./ShippingDetails";
 export default function ReviewModal(props) {
   return (
     <Modal
@@ -10,19 +13,19 @@ export default function ReviewModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          Order Review
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+        <OrderDetails />
+        <ShippingDetails />
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Link to="/">
+          <Button onClick={props.onHide} className="cart-button" type="submit">
+            Complete Order
+          </Button>
+        </Link>
       </Modal.Footer>
     </Modal>
   );
